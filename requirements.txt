@@ -7,3 +7,5 @@ scikit-learn==1.6.1
 sklearn-pandas==2.2.0
 huggingface-hub==0.26.2
 python-dotenv==1.2.1
+pytest==9.0.1
+httpx==0.28.1
