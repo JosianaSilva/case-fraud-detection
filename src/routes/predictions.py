@@ -6,7 +6,7 @@ import io
 from src.scripts.predict import FraudDetectionPredictor
 
 class TransactionData(BaseModel):
-    trans_date_trans_time: str = Field(..., description="Data e hora da transação")
+    trans_date_trans_time: str = Field(..., description="Data e hora da transação, formato 'YYYY-MM-DD HH:MM'")
     merchant: str = Field(..., description="Nome do comerciante")
     category: str = Field(..., description="Categoria da transação")
     amt: float = Field(..., description="Valor da transação")
@@ -16,7 +16,7 @@ class TransactionData(BaseModel):
     long: float = Field(..., description="Longitude")
     city_pop: int = Field(..., description="População da cidade")
     job: str = Field(..., description="Profissão")
-    dob: str = Field(..., description="Data de nascimento")
+    dob: str = Field(..., description="Data de nascimento, formato 'DD-MM-YYYY'")
     trans_num: Optional[str] = Field(None, description="Número da transação")
     merch_lat: float = Field(..., description="Latitude do comerciante")
     merch_long: float = Field(..., description="Longitude do comerciante")
