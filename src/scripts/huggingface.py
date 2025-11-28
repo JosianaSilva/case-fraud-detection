@@ -118,7 +118,7 @@ def download_model_from_hf(repo_id: str, local_dir: Path = None):
     if local_dir is None:
         local_dir = Path("models")
     
-    local_dir.mkdir(exist_ok=True)
+    os.makedirs(local_dir, exist_ok=True)
     
     token = os.getenv("HF_TOKEN")
     
