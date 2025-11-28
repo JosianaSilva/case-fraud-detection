@@ -161,3 +161,8 @@ docker-compose down
 
 ### Aplicação local
 Use `Ctrl+C` no terminal onde a aplicação está rodando.
+
+## Fluxo da aplicação
+O cliente envia um POST /predict com os dados da transação; a requisição entra no container Docker, onde a API FastAPI recebe e valida o input usando Pydantic. Depois os dados passam pelo pré-processamento (scaler, feature engineering) e são enviados para o modelo de machine learning carregado via pickle. O modelo gera a probabilidade e a classificação de fraude, que são enviados de volta como JSON na resposta ao cliente.
+
+![Diagrama](assets/Fluxo.jpg)
