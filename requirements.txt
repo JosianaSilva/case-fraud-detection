@@ -5,3 +5,5 @@ numpy==2.0.2
 pandas==2.2.2
 scikit-learn==1.6.1
 sklearn-pandas==2.2.0
+huggingface-hub==0.26.2
+python-dotenv==1.2.1
